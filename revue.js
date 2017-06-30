@@ -21,7 +21,7 @@ jQuery(function($){
         loader.css('display', 'inline-block');
 
         var data = {
-            action : 'revue_subscribe',
+            action : 'rkmd_revue_subscribe',
             email : email
         };
 
