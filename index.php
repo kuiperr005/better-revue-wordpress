@@ -29,8 +29,7 @@ function rkmd_revue_admin_settings() {
 		<img src="<?php echo plugins_url( 'images/logo.png', __FILE__ ); ?>" style="margin-top: 20px; width: 100px;"/>
 
 		<p style="font-size: 18px; line-height: 28px;margin-bottom: 40px;">
-			Om verbinding te maken met Revue, moet je je API key invullen. Je kunt je key vinden onderaan de <a target="_blank" style="color: #E15718;"
-			                                 href="https://www.getrevue.co/app/integrations">Integrations page.</a>
+			Om verbinding te maken met Revue, moet je je API key invullen. Je kunt je key vinden onderaan de <a target="_blank" style="color: #E15718;" href="https://www.getrevue.co/app/integrations">Integrations page.</a>
 		</p>
 
 		<form method="post" action="options.php">

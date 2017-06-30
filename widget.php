@@ -1,13 +1,13 @@
 <?php
 
-class Revue_Widget extends WP_Widget {
+class RKMD_Revue_Widget extends WP_Widget {
 
 	function __construct() {
 		parent::__construct(
-			'revue_widget',
-			__( 'Revue inschrijfformulier widget', REVUE_TRANS_DOMAIN ),
+			'rkmd_revue_widget',
+			__( 'Revue inschrijfformulier widget', RKMD_REVUE_TRANS_DOMAIN ),
 			array(
-				'description' => __( 'Laat gebruikers inschrijven op jouw Revue lijst', REVUE_TRANS_DOMAIN ),
+				'description' => __( 'Laat gebruikers inschrijven op jouw Revue lijst', RKMD_REVUE_TRANS_DOMAIN ),
 			)
 		);
 	}
@@ -57,8 +57,8 @@ class Revue_Widget extends WP_Widget {
 
 }
 
-function revue_register_widget() {
-	register_widget( 'Revue_Widget' );
+function rkmd_revue_register_widget() {
+	register_widget( 'RKMD_Revue_Widget' );
 }
 
-add_action( 'widgets_init', 'revue_register_widget' );
+add_action( 'widgets_init', 'rkmd_revue_register_widget' );
