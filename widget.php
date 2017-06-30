@@ -17,14 +17,14 @@ class RKMD_Revue_Widget extends WP_Widget {
 		if ( ! empty( $instance['title'] ) ) {
 			echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
 		}
-		echo revue_subscribe_form();
+		echo rkmd_revue_subscribe_form();
 		echo $args['after_widget'];
 	}
 
 	public function form( $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'New title', 'text_domain' );
 
-		if ( ! _revue_key_provided() ) {
+		if ( ! _rkmd_revue_key_provided() ) {
 			echo '<p>' . __( 'Vul je API key in onder Settings > Revue', 'text_domain' ) . '</p>';
 		}
 

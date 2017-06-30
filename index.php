@@ -12,7 +12,6 @@ $_revue_printed_forms = 0;
 
 include_once 'widget.php';
 
-
 function rkmd_revue_ajaxurl() {
 	?>
 	<script type="text/javascript">
@@ -100,7 +99,7 @@ add_action( 'wp_enqueue_scripts', 'rkmd_revue_enqueue_scripts' );
 
 function rkmd_revue_subscribe_callback() {
 	// revue_subscribe( $_POST['email'], $_POST['first_name'], $_POST['last_name'] );
-	revue_subscribe( $_POST['email'] );
+	rkmd_revue_subscribe( $_POST['email'] );
 
 	header( 'Content-Type: application/json' );
 
@@ -114,8 +113,8 @@ function rkmd_revue_subscribe_callback() {
 	wp_die();
 }
 
-add_action( 'wp_ajax_revue_subscribe', 'rkmd_revue_subscribe_callback' );
-add_action( 'wp_ajax_nopriv_revue_subscribe', 'rkmd_revue_subscribe_callback' );
+add_action( 'wp_ajax_rkmd_revue_subscribe', 'rkmd_revue_subscribe_callback' );
+add_action( 'wp_ajax_nopriv_rkmd_revue_subscribe', 'rkmd_revue_subscribe_callback' );
 
 function rkmd_revue_subscribe_form() {
 	global $_revue_printed_forms;
@@ -136,7 +135,7 @@ function rkmd_revue_subscribe_form() {
 	return $res;
 }
 
-add_shortcode( 'revue_subscribe', 'rkmd_revue_subscribe_form' );
+add_shortcode( 'rkmd_revue_subscribe', 'rkmd_revue_subscribe_form' );
 
 function _rkmd_revue_print_field( $label, $name, $type ) {
 	global $_revue_printed_forms;
@@ -159,7 +158,7 @@ function _rkmd_revue_key_provided() {
 	return ! empty( $options['api_key'] );
 }
 
-function revue_subscribe( $email, $first_name = null, $last_name = null ) {
+function rkmd_revue_subscribe( $email, $first_name = null, $last_name = null ) {
 	$options = get_option( 'rkmd_revue_general' );
 
 	$body = array(
