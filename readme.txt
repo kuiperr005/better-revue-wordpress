@@ -4,7 +4,7 @@ Better Revue Wordpress plugin (Dutch), based on the original plugin (https://nl.
 
 Changes:
 - Only show email input field (is faster for users than filling in extra information like Firstname and Lastname)
-- Enable submit and shortcode on popup modals and firstly hidden DOM elements
+- Enable submit when using the shortcode on popup modals and hidden DOM elements
 - Add loading indicator, while submitting form with AJAX 
 
 Contributors: revue
