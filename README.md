@@ -24,7 +24,7 @@ This plug-in easily allows you to integrate Revue subscriptions forms within pag
 
 Revue is a tool that lets you create newsletters within a few clicks. The tool can be used to gather existing content, order it, add some personal words and send out the resulting ready designed newsletter to subscribers.
 
-## Installation##
+## Installation ##
 
 Installation is pretty straight forward.
 
